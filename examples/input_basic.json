@@ -1,0 +1,23 @@
+- for input files like input_basic.json
+- responses/ → for output files like output_basic.json
+And inside each folder, you’ll paste the exact JSON I gave you earlier.
+
+🧭 How to Add Them in GitHub
+- Go to your repo
+- Click “Add file” → “Create new file”
+- In the filename box, type:
+examples/input_basic.json
+- Paste the content I gave you for that file
+- Add a commit message like:
+Add input_basic.json to examples
+- Click “Commit new file”
+Repeat for each file:
+- examples/input_verbose.json
+- examples/input_normalize.json
+- examples/input_bad.json
+- responses/output_basic.json
+- responses/output_verbose.json
+- responses/output_normalize.json
+- responses/output_error.json
+
+Once you’ve added those, your repo will be fully structured and ready to share, fork, or plug into your agent flows. Want help writing a short GitHub description or adding tags to boost discoverability?
