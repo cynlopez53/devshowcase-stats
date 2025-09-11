@@ -35,6 +35,7 @@ DevShowcase agents run on Relevance AI’s credit-based infrastructure. Here’s
 | File upload (if enabled) | Parses and analyzes uploaded data   | 10 credits  |
 
 **Note:** Credits are consumed per request. If you run out, Relevance AI will prompt you to top up.
+> ⚡ DevShowcase includes premium features. See usage table below for credit costs.
 
 To purchase credits, visit [Relevance AI](https://relevanceai.com).
 ## ❓ Monetization FAQ
