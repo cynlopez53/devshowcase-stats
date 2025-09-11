@@ -1,0 +1,9 @@
+{
+  "mean": 2.0,
+  "sum": 6,
+  "count": 3,
+  "details": {
+    "input": [1, 2, 3],
+    "steps": ["sum = 1 + 2 + 3", "mean = sum / count"]
+  }
+}
