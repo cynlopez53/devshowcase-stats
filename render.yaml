@@ -2,13 +2,23 @@ services:
   - type: web
     name: devshowcase-backend
     env: python
+    branch: main
+    plan: starter  # Upgrade to 'standard' if traffic increases
+    autoDeploy: true
+
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
-    plan: starter
-    branch: main
-    autoDeploy: true
+
+    healthCheckPath: /health  # Add this endpoint to your FastAPI app
+
     envVars:
       - key: SECRET_KEY
         sync: false
       - key: GUMROAD_API_KEY
         sync: false
+      - key: CREDIT_COST_PER_CALL
+        value: "1"
+      - key: MAX_FREE_CREDITS
+        value: "10"
+      - key: ENABLE_MONETIZATION
+        value: "true"
