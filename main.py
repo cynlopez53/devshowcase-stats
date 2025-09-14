@@ -1,20 +1,19 @@
-from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse
+from fastapi import FastAPI
 
 app = FastAPI()
 
 @app.get("/")
-def home():
+def root():
     return {"message": "Welcome to DevShowcase"}
 
+@app.get("/credits")
+def get_credits():
+    return {
+        "credits_remaining": 100,
+        "premium_features": ["batch_run", "agent_insights"]
+    }
+
 @app.post("/run")
-async def run(request: Request):
-    try:
-        data = await request.json()
-        code = data.get("code", "")
-        if not code:
-            return JSONResponse(content={"error": "No code provided"}, status_code=400)
-        response = f"Executed code: {code}"
-        return JSONResponse(content={"response": response})
-    except Exception as e:
-        return JSONResponse(content={"error": str(e)}, status_code=500)
+def run_agent(payload: dict):
+    code = payload.get("code", "")
+    return {"response": f"Executed code: {code}"}
